@@ -18,10 +18,13 @@ public class Database {
     public void insertData() {
         LOGGER.info("> Inserting data...");
 
-        jdbcTemplate.execute("INSERT INTO User(first_name,last_name) VALUES('Victor', 'Hygo')");
-        jdbcTemplate.execute("INSERT INTO User(first_name,last_name) VALUES('Dante', 'Alighieri')");
-        jdbcTemplate.execute("INSERT INTO User(first_name,last_name) VALUES('Stefan', 'Zweig')");
-        jdbcTemplate.execute("INSERT INTO User(first_name,last_name) VALUES('Oscar', 'Wilde')");
+        jdbcTemplate.execute("INSERT INTO User(USER_NAME,PASSWORD) VALUES('Antonio', '1')");
+        jdbcTemplate.execute("INSERT INTO User(USER_NAME,PASSWORD) VALUES('Claudia', '2')");
+        jdbcTemplate.execute("INSERT INTO User(USER_NAME,PASSWORD) VALUES('Teresa', '3')");
+        jdbcTemplate.execute("INSERT INTO User(USER_NAME,PASSWORD) VALUES('Juan', '4')");
+        jdbcTemplate.execute("INSERT INTO Account(USER_NAME,AMOUNT) VALUES('Antonio', '30')");
+        jdbcTemplate.execute("INSERT INTO Account(USER_NAME,AMOUNT) VALUES('Antonio', '10')");
+        jdbcTemplate.execute("INSERT INTO Account(USER_NAME,AMOUNT) VALUES('Teresa', '50')");
     }
 
 }
