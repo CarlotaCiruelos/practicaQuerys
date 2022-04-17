@@ -11,6 +11,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.env.AbstractEnvironment;
+import pat.practicaQuery.entity.Account;
 import pat.practicaQuery.entity.User;
 import pat.practicaQuery.repository.AccountRepository;
 import pat.practicaQuery.repository.UserJdbcTemplateRepository;
@@ -93,6 +94,18 @@ public class PracticaQueryApplication implements CommandLineRunner {
 		}
 
 		//Query 1
+		List<Account> accountList = accountRepository.getAccountWithUser("Antonio");
+		for(Account account : accountList){
+			LOGGER.info(account.toString());
+		}
+
+		//Query2
+		List<Account> accountList1 = accountRepository.getAllAccount("Antonio");
+		for(Account account : accountList1){
+			LOGGER.info(account.toString());
+		}
+
+
 
 
 
