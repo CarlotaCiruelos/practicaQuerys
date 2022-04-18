@@ -11,11 +11,11 @@ import java.util.List;
 public interface AccountRepository extends CrudRepository<Account, Long> {
     //INNER-JOIN
     @Query("SELECT * FROM ACCOUNT INNER JOIN USER ON USER.ID=ACCOUNT.ID")
-    List<Account> getAccountWithUser( @Param("USER_NAME") String name);
+    List<Account> getAccountWithUser();
 
     //LEFT JOIN
     @Query("SELECT ACCOUNT.AMOUNT FROM ACCOUNT LEFT JOIN USER ON USER.USER_NAME=ACCOUNT.USER_NAME")
-    List<Account> getAllAccount(@Param("USER_NAME") String name);
+    List<Account> getAllAccount();
 
 
 

@@ -93,14 +93,14 @@ public class PracticaQueryApplication implements CommandLineRunner {
 			LOGGER.info(u.toString());
 		}
 
-		//Query 1
-		List<Account> accountList = accountRepository.getAccountWithUser("Antonio");
+		//Query JOIN INNER
+		List<Account> accountList = accountRepository.getAccountWithUser();
 		for(Account account : accountList){
 			LOGGER.info(account.toString());
 		}
 
-		//Query2
-		List<Account> accountList1 = accountRepository.getAllAccount("Antonio");
+		// QUERY JOIN LEFT
+		List<Account> accountList1 = accountRepository.getAllAccount();
 		for(Account account : accountList1){
 			LOGGER.info(account.toString());
 		}
